@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ThespoonWithActiverecord</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <div class="container mt-3">
+      <div class="d-flex align-items-center justify-content-between">
+        <h1>
+          <%= link_to "The Spoon", root_path %>
+        </h1>
+        <%= link_to "New restaurant", new_restaurant_path, class: "btn btn-danger" %>
+      </div>
+    </div>
+
+    <hr>
+
+    <%= notice %>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>
